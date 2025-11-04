@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Results | <%= shopName %></title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+
+    <%- include('partials/header') %>
+
+    <section class="confirmation-section">
+      <div class="confirmation-content">
+        <h1 class="confirmation-title">Thank you, <%= first %>!</h1>
+        <p class="confirmation-subtitle">Here are your survey responses:</p>
+
+        <div class="confirmation-box">
+          <p><strong>Name:</strong> <%= first %> <%= last %></p>
+          <p><strong>Email:</strong> <%= email %></p>
+          <p><strong>Age:</strong> <%= age %></p>
+          <p><strong>Drink Category:</strong> <%= category %></p>
+          <p><strong>Student:</strong> <%= isStudent %></p>
+        </div>
+
+        <p class="confirmation-footer">Your feedback helps us at <%= shopName %> improve. Cheers!</p>
+      </div>
+    </section>
+
+  </body>
+</html>

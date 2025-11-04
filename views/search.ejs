@@ -1,17 +1,31 @@
 <!doctype html>
 <html>
   <head>
-    <title><%= shopName %></title>
+    <title>Search | <%= shopName %></title>
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <h1>Welcome to <%= shopName %></h1>
-    <h2>Search for a drink here!</h2>
-    <form action="/search_result" method="GET">
-        <label for="search_box">Name:</label>
-        <input id="search_box" type="text" name="search_text">
-        <label for="category">Category:</label>
-        <input id="category" type="text" name="category">
-        <input type="submit" value="OK">
-    </form>
+
+    <%- include('partials/header') %>
+
+    <section class="search-section">
+      <h1 class="search-title">Find Your Drink 🍹</h1>
+      <p class="search-description">Search our menu by drink name or category</p>
+
+      <form class="search-form" action="/search_result" method="GET">
+        <div class="form-group">
+          <label>Name:</label>
+          <input type="text" name="search_text" placeholder="e.g. Mojito">
+        </div>
+
+        <div class="form-group">
+          <label>Category:</label>
+          <input type="text" name="category" placeholder="e.g. Cocktails">
+        </div>
+
+        <input class="submit-button" type="submit" value="Search">
+      </form>
+    </section>
+
   </body>
 </html>

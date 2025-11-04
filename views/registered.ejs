@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registered - <%= shopName %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <%- include('partials/header') %>
+
+  <section class="confirmation">
+    <h1>Welcome to The Thirsty Student, <%= first %>! 🍻</h1>
+    <p>You’re officially registered.</p>
+
+    <div class="confirm-box">
+      <p><strong>Name:</strong> <%= first %> <%= last %></p>
+      <p><strong>Email:</strong> <%= email %></p>
+    </div>
+
+    <p>We’ll be reaching out soon with exclusive offers!</p>
+  </section>
+
+</body>
+</html>

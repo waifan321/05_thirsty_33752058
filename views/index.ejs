@@ -2,14 +2,26 @@
 <html>
   <head>
     <title><%= shopName %></title>
+    <link rel="stylesheet" href="/style.css">
+
   </head>
   <body>
-    <h1>Welcome to <%= shopName %></h1>
-    <h2>Here are some things that we sell:</h2>
-    <ul>
-        <% for(let i = 0; i < productCategories.length; i++) { %>
-        <li><%= productCategories[i] %></li>
-        <% } %>
-    </ul>
-    </body>
+    <%- include('partials/header') %>
+    <section class="main">
+    <div class="main-content">
+      <h1 class="main-title"><%= shopName %></h1>
+      <h2 class="main-subtitle">A Premium Bar Experience</h2>
+      <p class="main-desc">
+        Here are some things that we sell:
+      </p>
+
+      <ul class="menu-list">
+        <% productCategories.forEach(function(category) { %>
+          <li><%= category %></li>
+        <% }); %>
+      </ul>
+
+    </div>
+  </section>
+  </body>
 </html>

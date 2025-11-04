@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey | <%= shopName %></title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+
+    <%- include('partials/header') %>
+
+    <section class="survey-section">
+      <h1 class="survey-title">Tell Us What You Think</h1>
+      <p class="survey-description">Help <%= shopName %> improve by answering a few quick questions.</p>
+
+      <form class="survey-form" method="POST" action="/survey_result">
+        <!-- Personal details -->
+        <div class="form-group">
+          <label for="first">First Name</label>
+          <input id="first" type="text" name="first" required />
+        </div>
+
+        <div class="form-group">
+          <label for="last">Surname</label>
+          <input id="last" type="text" name="last" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" name="email" required />
+        </div>
+
+        <!-- Age question -->
+        <div class="form-group">
+          <label for="age">How old are you?</label>
+          <input id="age" type="text" name="age" required />
+        </div>
+
+        <!-- Drinks category question (radio) -->
+        <div class="form-group">
+          <label>Which of the following drinks categories do you consume?</label>
+          <% productCategories.forEach(function(cat, idx) { %>
+            <div class="radio-group">
+              <input type="radio" id="cat<%= idx %>" name="category" value="<%= cat %>" required />
+              <label for="cat<%= idx %>"><%= cat %></label>
+            </div>
+          <% }); %>
+        </div>
+
+        <!-- Student checkbox -->
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="isStudent" name="isStudent" />
+          <label for="isStudent">I am a student</label>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit Survey</button>
+      </form>
+    </section>
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Register - <%= shopName %></title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <%- include('partials/header') %>
+
+    <section class="form-section">
+      <h1 class="form-title">Join The Thirsty Student Club</h1>
+      <p class="form-subtitle">Sign up to get exclusive drink deals and event invites!</p>
+
+      <form class="register-form" method="POST" action="/registered">
+
+        <label for="first">First Name</label>
+        <input id="first" type="text" name="first" required />
+
+        <label for="last">Last Name</label>
+        <input id="last" type="text" name="last" required />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required />
+
+        <button type="submit" class="btn-submit">Register</button>
+
+      </form>
+    </section>
+  </body>
+</html>

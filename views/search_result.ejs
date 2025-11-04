@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Results | <%= shopName %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <%- include('partials/header') %>
+
+  <section class="confirmation-section">
+    <div class="confirmation-content">
+      <h1 class="confirmation-title">Search Results 🔎</h1>
+
+      <div class="confirmation-box">
+        <p><strong>Drink Name:</strong> <%= search_text %></p>
+        <p><strong>Category:</strong> <%= category %></p>
+      </div>
+
+      <p class="confirmation-footer">
+        We couldn't find your drink! Sorry! 🍻
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,10 +1,38 @@
 <!doctype html>
 <html>
   <head>
-    <title><%= shopName %></title>
+    <title>Our Locations - <%= shopName %></title>
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <h1>About <%= shopName %></h1>
-    <p>We sell all sorts of drinks</p>
+    <%- include('partials/header') %>
+
+    <section class="locations-section">
+      <h1 class="locations-title">Find The Thirsty Student</h1>
+      <p class="locations-subtitle">Visit one of our popular student-friendly bars!</p>
+
+      <div class="locations-container">
+
+        <div class="location-card">
+          <h3>New Cross</h3>
+          <p>123 Uni Street, London SE14</p>
+          <p>Mon–Sun: 12pm – 1am</p>
+        </div>
+
+        <div class="location-card">
+          <h3>Greenwich</h3>
+          <p>45 River Road, London SE10</p>
+          <p>Mon–Sun: 12pm – 1am</p>
+        </div>
+
+        <div class="location-card">
+          <h3>Canary Wharf</h3>
+          <p>88 Dockside Lane, London E14</p>
+          <p>Mon–Fri: 12pm – 1am<br>Sat–Sun: 12pm – 8pm</p>
+        </div>
+
+      </div>
+    </section>
+
   </body>
 </html>
